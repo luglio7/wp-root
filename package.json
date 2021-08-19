@@ -1,0 +1,25 @@
+{
+  "name": "root",
+  "version": "1.0.0",
+  "description": "Wp skeleton theme",
+  "main": "theme/js/index.js",
+  "scripts": {
+    "css-dev": "postcss theme/css/index.css --output assets/css/style.css --env development --verbose --watch",
+    "css-build": "postcss theme/css/index.css --output assets/css/style.css --env production --verbose",
+    "js-dev": "esbuild theme/js/index.js --outdir=assets/js --sourcemap --splitting --bundle --serve=8000 --format=esm",
+    "js-build": "esbuild theme/js/index.js --outdir=assets/js --sourcemap --splitting --bundle --minify --format=esm",
+    "build": "npm run css-build && npm run js-build"
+  },
+  "author": "Luca Bertaiola",
+  "license": "ISC",
+  "browserslist": "> 3% and last 2 versions and not dead",
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "cssnano": "^5.0.8",
+    "esbuild": "^0.12.21",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.2",
+    "postcss-preset-env": "^6.7.0"
+  }
+}

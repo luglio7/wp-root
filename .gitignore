@@ -1,0 +1,9 @@
+node_modules
+logs
+
+Icon
+.DS_Store
+.lock
+
+/.vscode
+/.ideaw
